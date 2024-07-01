@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FK Custom Garage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/icono.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logoFKrosa.png" alt="logo">
+        </div>
+        <div class="menu2">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav class="menu">
+            <ul>
+             <li><a href="index.html">INICIO</a></li>
+             <li><a href="#servicios">SERVICIOS</a></li>
+             <li><a href="#trabajos">TRABAJOS</a></li>
+             <li><a href="#contacto">CONTACTO</a></li>
+             <li><a href="productos.html">PRODUCTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contenedor-tabla">
+           <h2 class="crud-title">AGREGAR NUEVO PRODUCTO</h2>
+           <form id="productForm">
+                <input class="input-label" id="titulo" type="text" name="titulo" placeholder="Titulo del producto:" required>
+                <input class="input-label" id="precioPeso" type="number" name="precioPeso" placeholder="Precio peso:" required>
+                <input class="input-label" id="precioDolar" type="number" name="precioDolar" placeholder="Precio dolar:" required>
+                <input class="input-label" id="fecha" type="date" name="fecha" placeholder="YYYY-MM-DD" required>
+                <button type="submit">AGREGAR PRODUCTO</button>
+                
+            </form>
+
+            <div id="editForm" style="display: none;" class="modificar">  
+                <form action="javascript:none" class="formularioModificado">
+                     <input class="input-label" type="text" id="editIdcod" placeholder="Ingrese un id nuevo">
+                     <input class="input-label" id="editTitulo" type="text" name="editTitulo" placeholder="Titulo del producto:" required>
+                     <input class="input-label" id="editPrecioPeso" type="number" name="editPrecioPeso" placeholder="Precio peso:" required>
+                     <input class="input-label" id="editPrecioDolar" type="number" name="editPrecioDolar" placeholder="Precio dolar:" required>
+                     <input class="input-label" id="editFecha" type="date" name="editFecha" placeholder="YYYY-MM-DD" required>
+                     <button class="guardarBtn" onclick="modificarProducto('editIdcod', 'editTitulo', 'editPrecioPeso', 'editPrecioDolar', 'editFecha')">Guardar Cambios</button>
+                     <button type="button" id="cancelEditBtn">Cancelar</button>
+
+                </form>
+           </div>
+ 
+           
+
+            <button id="cargarProdBtn">CARGAR PRODUCTOS</button>
+            <table id="prodTable">
+              <thead>
+                   <tr>
+                     <th>ID</th>
+                     <th>TITULO</th>
+                     <th>PRECIO PESO</th>
+                     <th>PRECIO DOLAR</th>
+                     <th>FECHA</th>
+                     <th>ACCIONES</th>
+                   </tr>
+              </thead>
+              <tbody id="productTbody">
+                     
+              </tbody>
+         </table>
+         
+        </section>
+
+        
+    </main>
+
+    <footer id="contacto">
+        <div class="contenedor-footer">
+            <div class="logoFooter">
+                <img src="img/FK Custom Grovee 2.png" alt="logo2">
+            </div>
+           <p>San Francisco, Córdoba</p>
+            <div class="redes">
+                <a href="https://www.instagram.com/fk_customgarage?igsh=MTRhN3Z2NTR2cnQ5bQ==">
+                    <img src="img/Instagram_icon-icons.com_66804.ico" alt="instagram">
+                </a>
+                <a href="https://wa.me/message/374QJ2FAKTJWE1">
+                    <img src="img/whatsapp_icon-icons.com_62756.ico" alt="whatsapp">
+                </a>
+            </div>
+        </div>
+        <div class="line"></div>
+
+    </footer>
+    
+ 
+
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-image: url(img/fondoLadrillos.jpg);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header {
+    background-color: black;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    transition: 0.6s;
+}
+
+.menu2 {
+    display: none;
+}
+
+header.down {
+    background: black;
+    padding: 15px 80px;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin: 0 5px;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+.menu ul li a:hover{
+    color: black;
+    background: #c71d6f;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0px;
+
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+/*Servicios*/
+
+.subtitulo {
+    text-decoration-line: underline;
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.contenedor-servicios {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.img-servicios {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.checklist-servicio {
+    width: 45%;
+}
+
+.services {
+    margin-bottom: 20px;
+}
+p{
+    color: beige;
+}
+.n-servicios {
+    margin-bottom: 7px;
+    color: white;
+}
+
+.numero {
+    display: inline-block;
+    background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
+    width: 30px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+.fotos {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contenedor-fotos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-trabajos {
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.image-light {
+    position: fixed;
+    display: flex;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.show {
+    transform: translate(0);
+}
+
+.agregar-imagen {
+    padding-top: 80px;
+    object-fit: cover;
+    width: 60%;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.showImage {
+    transform: scale(1);
+}
+.close {
+    padding-top: 80px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+/*tabla*/
+.contenedor-tabla {
+    padding-top: 90px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+}
+
+h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-decoration-line: underline;
+}
+
+.input-label {
+    padding: 8px;
+    margin: 0 5px;
+    outline: none;
+    border: solid 1px #c71d6f;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+}
+
+.input-label:hover {
+    background: rgba(0, 0, 0, .5);
+}
+
+button {
+    padding: 7px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #fff;
+    background: #c71d6f;
+    border: solid 1px #fff;
+}
+
+button:hover {
+    background: black;
+}
+
+table {
+    margin-top: 30px;
+    border: solid 2px #c71d6f;
+    color: #fff;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+thead {
+    background: rgba(0, 0, 0, .5);
+}
+
+th {
+    padding: 20px 15px;
+    font-weight: 700;
+    border: solid 1px #c71d6f;
+}
+
+td {
+    padding: 15px;
+    border-bottom: solid 1px #c71d6f;
+    border: solid 1px #c71d6f;
+}
+
+tbody tr:hover {
+    background: rgba(0, 0, 0, .5);
+
+}
+
+/*Footer*/
+
+footer {
+    background: black;
+    height: auto;
+    width: 100vw;
+    margin-top: auto;
+    padding-top: 40px;
+    color: white;
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contenedor-footer p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.logoFooter img {
+    width: 30%;
+}
+
+.redes {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.redes img {
+    width: 30px;
+    margin: 0 10px;
+    
+}
+
+@media screen and (max-width: 1100px) { 
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .menu2 {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu2 .line {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        margin: 6px 0;
+    }
+
+    .menu {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: black;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+
+    .menu.active {
+        height: 450px;
+    }
+
+    .menu ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .menu.active ul {
+        opacity: 1;
+    }
+
+    .menu ul li a {
+        margin-bottom: 12px;
+        
+    }
+   
+    .img-servicios {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+
+    .checklist-servicio {
+        width: 80%;
+    }
+    .services {
+        margin-bottom: 30px;
+    }
+
+    .agregar-imagen{
+        width: 80%;
+    }
+    .img-trabajos{
+        width: 45%;
+    }
+    .contenedor-footer p {
+        font-size: 10px;
+    }
+    .redes img {
+        width: 20px;
+    }
+}
+
+@media screen and (max-widht:500px) {
+
+    .agregar-imagen{
+        width: 95%;
+    }
+    .subtitulo{
+        font-size: 30px;
+    }
+    .img-trabajos{
+        width: 95%;
+    }
+    .social-media{
+        width: 100%;
+    }
+    .contactanos{
+        width: 90%;
+    }
+}
+
